@@ -1,0 +1,69 @@
+{
+    "system": {
+        "name": "IoT Smart Home Monitor",
+        "version": "1.0.0",
+        "log_level": "DEBUG"
+    },
+    "sensors": {
+        "temperature": {
+            "enabled": true,
+            "pin": 4,
+            "read_interval_ms": 2000,
+            "min_value": -40.0,
+            "max_value": 85.0,
+            "calibration_offset": -0.5
+        },
+        "humidity": {
+            "enabled": true,
+            "pin": 5,
+            "read_interval_ms": 3000,
+            "min_value": 0.0,
+            "max_value": 100.0,
+            "calibration_offset": 1.2
+        },
+        "motion": {
+            "enabled": true,
+            "pin": 17,
+            "read_interval_ms": 500,
+            "sensitivity": 0.8
+        }
+    },
+    "communication": {
+        "protocol": "mqtt",
+        "mqtt": {
+            "broker_host": "192.168.1.100",
+            "broker_port": 1883,
+            "client_id": "smart_home_001",
+            "topic_prefix": "home/sensors",
+            "keepalive_sec": 60,
+            "qos": 1
+        },
+        "http": {
+            "base_url": "https://api.smarthome.local",
+            "port": 8443,
+            "api_key": "sk-iot-xxxxxxxxxxxx",
+            "timeout_ms": 5000,
+            "retry_count": 3
+        }
+    },
+    "pipeline": {
+        "filter_strategy": "moving_average",
+        "moving_average_window": 5,
+        "kalman_process_noise": 0.01,
+        "kalman_measurement_noise": 0.1,
+        "threshold_min": 0.5,
+        "threshold_max": 100.0
+    },
+    "devices": {
+        "fan": {
+            "id": "device_fan_01",
+            "type": "actuator",
+            "auto_trigger_temp": 30.0
+        },
+        "alarm": {
+            "id": "device_alarm_01",
+            "type": "actuator",
+            "motion_trigger": true
+        }
+    }
+}
