@@ -51,6 +51,16 @@ set(DEVICE_SOURCES
     src/devices/DeviceController.cpp
 )
 
+set(SERVICE_SOURCES
+    src/services/SensorService.cpp
+    src/services/CommunicationService.cpp
+    src/services/AutomationService.cpp
+)
+
+set(APP_SOURCES
+    src/app/Application.cpp
+)
+
 add_executable(${PROJECT_NAME}
     src/main.cpp
     ${CORE_SOURCES}
@@ -58,6 +68,8 @@ add_executable(${PROJECT_NAME}
     ${COMMUNICATION_SOURCES}
     ${PIPELINE_SOURCES}
     ${DEVICE_SOURCES}
+    ${SERVICE_SOURCES}
+    ${APP_SOURCES}
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
