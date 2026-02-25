@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sensors/ISensor.h"
+#include "sensors/interfaces/ISensor.h"
 #include "core/Logger.h"
 #include <chrono>
 #include <random>

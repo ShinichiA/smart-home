@@ -69,8 +69,8 @@ int main() {
     logger.setLogLevel(iot::LogLevel::DEBUG);
 
     logger.info("╔══════════════════════════════════════════════════╗", "Main");
-    logger.info("║   IoT Smart Home Monitoring System v1.0.0       ║", "Main");
-    logger.info("║   C++17 — Senior Level Architecture Demo        ║", "Main");
+    logger.info("║   IoT Smart Home Monitoring System v1.0.0        ║", "Main");
+    logger.info("║   C++17 — Senior Level Architecture Demo         ║", "Main");
     logger.info("╚══════════════════════════════════════════════════╝", "Main");
 
     // ══════════════════════════════════════════════════════════════════

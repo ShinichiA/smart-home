@@ -1,4 +1,7 @@
 #include "sensors/SensorFactory.h"
+#include "sensors/TemperatureSensor.h"
+#include "sensors/HumiditySensor.h"
+#include "sensors/MotionSensor.h"
 #include "core/Logger.h"
 
 namespace iot {

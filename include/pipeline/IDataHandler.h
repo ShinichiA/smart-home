@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sensors/ISensor.h"
+#include "sensors/interfaces/SensorReading.h"
 #include <memory>
 #include <string>
 

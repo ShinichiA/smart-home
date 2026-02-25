@@ -1,9 +1,6 @@
 #pragma once
 
-#include "sensors/ISensor.h"
-#include "sensors/TemperatureSensor.h"
-#include "sensors/HumiditySensor.h"
-#include "sensors/MotionSensor.h"
+#include "sensors/interfaces/ISensor.h"
 #include <memory>
 #include <string>
 #include <unordered_map>
