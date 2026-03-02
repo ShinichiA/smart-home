@@ -1,6 +1,6 @@
 #pragma once
 
-#include "pipeline/IDataHandler.h"
+#include "pipeline/BaseDataHandler.h"
 
 namespace iot {
 

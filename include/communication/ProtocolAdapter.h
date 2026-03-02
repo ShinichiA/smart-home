@@ -1,6 +1,6 @@
 #pragma once
 
-#include "communication/IProtocol.h"
+#include "communication/interfaces/IProtocol.h"
 #include <memory>
 
 namespace iot {

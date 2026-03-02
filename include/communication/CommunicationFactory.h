@@ -1,9 +1,7 @@
 #pragma once
 
-#include "communication/IProtocol.h"
-#include "communication/MqttClient.h"
-#include "communication/HttpClient.h"
-#include "communication/ProtocolAdapter.h"
+#include "communication/interfaces/IProtocol.h"
+#include "communication/interfaces/CommunicationTypes.h"
 #include <memory>
 #include <string>
 
@@ -15,11 +13,6 @@ namespace iot {
  * Design Patterns: Abstract Factory
  * Modern C++: std::unique_ptr, enum class, move semantics
  */
-enum class ProtocolType : uint8_t {
-    MQTT = 0,
-    HTTP = 1
-};
-
 class CommunicationFactory {
 public:
     /**

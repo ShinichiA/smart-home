@@ -30,27 +30,13 @@ public:
     virtual SensorReading handle(SensorReading reading) = 0;
 
     [[nodiscard]] virtual std::string getHandlerName() const = 0;
-};
-
-/**
- * @brief Base handler with default chain forwarding.
- */
-class BaseDataHandler : public IDataHandler {
-public:
-    IDataHandler& setNext(std::shared_ptr<IDataHandler> next) override {
-        next_ = std::move(next);
-        return *next_;
-    }
-
-    SensorReading handle(SensorReading reading) override {
-        if (next_) {
-            return next_->handle(std::move(reading));
-        }
-        return reading;
-    }
 
 protected:
-    std::shared_ptr<IDataHandler> next_;
+    IDataHandler() = default;
+    IDataHandler(const IDataHandler&) = default;
+    IDataHandler& operator=(const IDataHandler&) = default;
+    IDataHandler(IDataHandler&&) = default;
+    IDataHandler& operator=(IDataHandler&&) = default;
 };
 
 } // namespace iot

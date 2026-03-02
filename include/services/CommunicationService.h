@@ -1,6 +1,6 @@
 #pragma once
 
-#include "communication/IProtocol.h"
+#include "communication/interfaces/IProtocol.h"
 #include "communication/CommunicationFactory.h"
 #include "core/EventBus.h"
 #include "core/Logger.h"

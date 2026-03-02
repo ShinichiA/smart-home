@@ -1,29 +1,12 @@
 #pragma once
 
-#include <string>
+#include "devices/interfaces/ICommand.h"
 #include <memory>
 #include <vector>
 #include <functional>
 #include <stack>
 
 namespace iot {
-
-/**
- * @brief Command pattern for device actions with undo/redo support.
- *
- * Design Patterns: Command
- * Modern C++: std::function, std::unique_ptr, std::stack,
- *             move semantics, lambda-friendly
- */
-class ICommand {
-public:
-    virtual ~ICommand() = default;
-
-    virtual void execute() = 0;
-    virtual void undo() = 0;
-
-    [[nodiscard]] virtual std::string getDescription() const = 0;
-};
 
 /**
  * @brief Generic command using lambdas for execute/undo actions.

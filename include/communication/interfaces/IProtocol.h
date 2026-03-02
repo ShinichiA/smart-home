@@ -31,6 +31,13 @@ public:
     using MessageCallback = std::function<void(const std::string& topic,
                                                 const std::string& payload)>;
     virtual void setMessageCallback(MessageCallback callback) = 0;
+
+protected:
+    IProtocol() = default;
+    IProtocol(const IProtocol&) = default;
+    IProtocol& operator=(const IProtocol&) = default;
+    IProtocol(IProtocol&&) = default;
+    IProtocol& operator=(IProtocol&&) = default;
 };
 
 } // namespace iot

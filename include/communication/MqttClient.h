@@ -1,6 +1,6 @@
 #pragma once
 
-#include "communication/IProtocol.h"
+#include "communication/interfaces/IProtocol.h"
 #include <atomic>
 #include <queue>
 #include <mutex>

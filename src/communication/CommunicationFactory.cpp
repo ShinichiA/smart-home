@@ -1,4 +1,7 @@
 #include "communication/CommunicationFactory.h"
+#include "communication/MqttClient.h"
+#include "communication/HttpClient.h"
+#include "communication/ProtocolAdapter.h"
 #include "core/ConfigManager.h"
 #include "core/Logger.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "pipeline/IDataHandler.h"
+#include "pipeline/BaseDataHandler.h"
 #include "pipeline/DataValidator.h"
 #include "pipeline/DataFilter.h"
 #include "pipeline/DataTransformer.h"
